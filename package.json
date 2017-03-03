@@ -1,0 +1,30 @@
+{
+  "name": "code-club",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/danielanteloagra/code-club-js-base",
+  "author": "Daniel Antelo <daniel.antelo@worldfirst.com>",
+  "scripts": {
+    "test": "NODE_PATH=./ mocha spec --opts .mocha.opts"
+  },
+  "engines": {
+    "node": ">=7.5.0",
+    "npm": ">=4.1.2",
+    "yarn": ">=0.19.0"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "enzyme": "^2.7.1",
+    "react-addons-test-utils": "^15.4.2",
+    "react-scripts": "0.9.3",
+    "sinon": "^1.17.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  }
+}
