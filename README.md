@@ -5,8 +5,8 @@ Base repo for code club tasks in javascript.
 
 ### Requirements
 
-- [Node 7.5](https://nodejs.org/en/)
-- [Yarn 0.19](https://yarnpkg.com/en/docs/install#mac-tab)
+- [Node >=4.5](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/en/docs/install#mac-tab)
 - Read [get started with mocha](http://ricostacruz.com/til/get-started-with-mocha)
 
 
