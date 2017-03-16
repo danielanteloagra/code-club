@@ -1,0 +1,36 @@
+# Third party
+/node_modules/
+/vendor/
+/bin/
+
+# generated files
+build/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ide files
+.settings
+.project
+.idea
+.buildpath
+nbproject
+
+# temp/os files
+.DS_Store
+.AppleDouble
+.AppleDB
+.AppleDesktop
+.LSOverride
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN
+Desktop.ini
+._*
+*~
+*.swp
+*.out
+*.tmp
