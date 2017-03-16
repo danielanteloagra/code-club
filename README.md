@@ -4,9 +4,8 @@ Base repo for code club tasks in javascript.
 
 ### Requirements
 
-- [Node 7.5](https://nodejs.org/en/)
-- [Yarn 0.19](https://yarnpkg.com/en/docs/install#mac-tab)
-
+- [PHP >= 5.6](http://php.net)
+- [Composer](https://getcomposer.org/doc/00-intro.md)
 
 ### Setup
 
@@ -16,25 +15,28 @@ Base repo for code club tasks in javascript.
 git clone https://github.com/danielanteloagra/code-club-js-base
 ```
 
-2. Checkout the desired branch: vanilla-js or react
+2. Checkout the desired branch: phpspec
 
 ```bash
-git checkout vanilla-js
+git checkout phpspec
 ```
-
 
 3. Install dependencies in root of cloned folder
 
 ```bash
-yarn
+composer install
 ```
 
-4. Check test environment works
+4. Describe your class
 
 ```bash
-yarn test
+bin/phpspec desc YourClass
 ```
 
-Note: This will also be the command you execute to run your newly added tests.
+5. Run phpspec
+
+```bash
+bin/phpspec run
+```
 
 Have fun!
