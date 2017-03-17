@@ -25,8 +25,13 @@ class App extends Component {
   render() {
     return (
       <div className="codebreaker">
-        <input onChange={this.onChange}/>
-        <span>{this.state.result}</span>
+        <div className="codebreaker__guess">
+          <label>Your Guess: </label>
+          <input onChange={this.onChange}/>
+        </div>
+        <span className="codebreaker__result">
+          { this.state.result }
+        </span>
       </div>
     );
   }
