@@ -38,4 +38,10 @@ This will keep watching and re-running as you change code.
 
 5. Repeat 2-4.
 
+6. Once the kata is complete, play the game in your browser by running the command
+
+```bash
+yarn start
+```
+
 Have fun!
