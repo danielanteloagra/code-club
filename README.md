@@ -26,4 +26,8 @@ yarn test
 
 Note: This will be the command you execute every time you want to run tests.
 
+3. Pick a Kata from [code-katas.md](./code-katas.md)
+
+4. Modify the module and spec as needed
+
 Have fun!
