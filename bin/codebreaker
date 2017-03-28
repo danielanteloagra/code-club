@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+const readline = require('readline');
+const NumberCodeBreaker = require('../src/NumberCodeBreaker.js').NumberCodeBreaker;
+const ColourFormatter = require('../src/ColourFormatter.js').ColourFormatter;
+
+function Main(codebreaker, formatter)
+{
+    const secret = (Math.floor(Math.random() * (10000 - 1000)) + 1000).toString();
+
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    codebreaker.setSecret(secret);
+
+    this.run = function ()
+    {
+        rl.question('Guess what 4 digit number I\'m thing of? ', (guess) => {
+            guessResult = codebreaker.takeGuess(guess);
+
+            if (guessResult !== '++++') {
+                console.log(formatter.format(guessResult));
+                this.run();
+            } else {
+                console.log('Well done!!!');
+                rl.close();
+            }
+        });
+    }
+}
+
+codebreaker = new NumberCodeBreaker();
+formatter = new ColourFormatter();
+
+game = new Main(codebreaker, formatter);
+game.run();
