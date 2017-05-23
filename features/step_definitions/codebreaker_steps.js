@@ -19,6 +19,14 @@ module.exports = function () {
         done();
     });
 
+    this.Then(/^I should get the output "([^"]*)"$/, function (expectedResult, done) {
+        if (expectedResult !== guessResult) {
+            done('Expected ' + expectedResult + ' but got: ' + guessResult);
+        }
+
+        done();
+    });
+
     this.Then(/^I should get the output "([^"]*)" in (.*)$/, function (expectedResult, color, done) {
         output = this.formatter.format(guessResult);
         expectedOutputs = possibleOutputsForColor(color, expectedResult);

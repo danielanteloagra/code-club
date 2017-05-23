@@ -15,11 +15,15 @@ The rules for giving feedback about the matching are:
 - Returns a "+-" for one number match in the wrong place, and one exact match (Ex: secret 1234 guess 1526)
 - Returns a "++--" for two number matches in the wrong place, and two exact matches (Ex: secret 1234 guess 1432)
 - Returns a "+" when one number in the guess exists in the secret in both an exact position and in a wrong place (Ex: secret 1124 guess of 5167)
-- Returns a "+" for a secret of 1234 and a guess of 1155
-- Returns a "+" for a secret of 4321 and a guess of 5511
-- Returns a "+-" for a secret of 1231 and a guess of 5511
-- Returns a "+-" for a secret of 1231 and a guess of 1155
-
+- Ignores duplicate numbers in guess that have already been matched in exact position
+  - Returns a "+" for a secret of 1234 and a guess of 1155
+  - Returns a "+" for a secret of 4321 and a guess of 5511
+  - Returns a "+-" for a secret of 1231 and a guess of 5511
+  - Returns a "+-" for a secret of 1231 and a guess of 1155
+- Returns "++++" when code is guessed
+- Visually
+  - hyphens or hyphens combined with plusses should be in red
+  - 3 or less plusses with no hyphens should be in yellow
 
 Setup
 -----
@@ -56,11 +60,11 @@ const MyObject = require('../src/MyObject').MyObject;
 
 describe('MyObject Module', () => {
     let myobject;
-    
+
     beforeEach(() => {
       myobject = new MyObject();
     });
-    
+
     it('is an object', () => {
         expect(myobject).to.be.object;
     });
