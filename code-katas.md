@@ -63,19 +63,6 @@ This is not common only to martial arts. [Malcolm Gladwell](http://www.amazon.co
 - Return `buzz` for multiples of 5
 - Return `fizzbuzz` for multiples of 3 and 5
 
-### Code Breaker
-In the code breaker you have a 4 digits secret, and you have to guess what that secret is by providing a 4 digits guess.
-
-The feedback you get depends on how your guess matches the secret. The rules for giving feedback about the matching are:
-
-- Returns an empty string for no matches
-- Returns a “-” when one number in the guess exists in the secret (Ex: secret 1234 guess 5168)
-- Returns a “+” when one number in the guess exists in the secret in the same exact position  (Ex: secret 1234 guess 6538)
-- Returns a “--” for a 2 number match in the wrong place (Ex: secret 1234 guess 5621)
-- Returns a “+-” for one number match in the wrong place, and one exact match (Ex: secret 1234 guess 1526)
-- Returns a "++--" for two number matches in the wrong place, and two exact matches (Ex: secret 1234 guess 1432)
-- Returns a "+" when one number in the guess exists in the secret in both an exact position and in a wrong place (Ex: secret 1124 guess of 5167)
-
 ### Prime Factors
 Return the prime factors for each number, from 1 to 50.
 
@@ -152,6 +139,26 @@ Scores are named as
 - C before D or M will subtract 100 from D or M (CD = 400, CM = 900)
 - a symbol representing a smaller number can be put after one representing a bigger one to be summed to that number (ex: XIII, XV, XXII, MC)
 - a valid combinations of symbols representing a smaller number can be put after one representing a bigger one to be summed to that number (ex: XIV, MCD)
+
+### Code Breaker
+In the code breaker you have a 4 digits secret, and you have to guess what that secret is by providing a 4 digits guess.
+
+The feedback you get depends on how your guess matches the secret. The rules for giving feedback about the matching are:
+
+- Returns an empty string for no matches
+- Returns a "-" when one number in the guess exists in the secret (Ex: secret 1234 guess 5168)
+- Returns a "+" when one number in the guess exists in the secret in the same exact position  (Ex: secret 1234 guess 6538)
+- Returns a "--" for a 2 number match in the wrong place (Ex: secret 1234 guess 5621)
+- Returns a "+-" for one number match in the wrong place, and one exact match (Ex: secret 1234 guess 1526)
+- Returns a "++--" for two number matches in the wrong place, and two exact matches (Ex: secret 1234 guess 1432)
+- Returns a "+" when one number in the guess exists in the secret in both an exact position and in a wrong place (Ex: secret 1124 guess of 5167)
+- Ignores duplicate numbers in guess that have already been matched in exact position
+  - Returns a "+" for a secret of 1234 and a guess of 1155
+  - Returns a "+" for a secret of 4321 and a guess of 5511
+  - Returns a "+-" for a secret of 1231 and a guess of 5511
+  - Returns a "+-" for a secret of 1231 and a guess of 1155
+- Returns "++++" when code is guessed
+
 
 ## Reference Links
 

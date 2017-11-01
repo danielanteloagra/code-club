@@ -1,10 +1,9 @@
 const expect = require('chai').expect;
-const Module = require('../src').Module;
+const myFunction = require('../src').Module;
 
-describe('Module', () => {
-  const instance = new Module();
+describe('myFunction', () => {
 
   it('works, hopefully...', () => {
-    expect(instance.sayHello()).to.equal('hello world');
+    expect(myFunction()).to.equal('hello world');
   });
 });
