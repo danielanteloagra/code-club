@@ -159,6 +159,14 @@ The feedback you get depends on how your guess matches the secret. The rules for
   - Returns a "+-" for a secret of 1231 and a guess of 1155
 - Returns "++++" when code is guessed
 
+### Clock
+
+Write a function that meets the following criteria, use node if you want with asserts to do TTD:
+
+- it should accept milli seconds
+- should return XXs if less than 60 seconds
+- should return XXm XXs if less than 60 minutes
+- should return XXh XXm XXs if 60 minutes or more
 
 ## Reference Links
 
